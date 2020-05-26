@@ -4,6 +4,7 @@ node_modules
 dist
 
 #files
+start.bat
 package-lock.json
 *.tgz
 *.log
