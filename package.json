@@ -1,9 +1,10 @@
 {
   "name": "steiner",
   "version": "1.0.0",
-  "description": "A project minifier application",
+  "description": "Simple web project minifier",
   "author": "Fahadul Islam",
-  "license": "CC BY-NC-ND 3.0",
+  "license": "GNU AGPLv3",
+  "repository": "https://github.com/DaPotatoMan/Steiner",
   "main": "init.js",
   "scripts": {
     "start": "electron .",
