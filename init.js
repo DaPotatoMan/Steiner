@@ -21,6 +21,7 @@ class System {
         width: 800,
         height: 500,
         frame: false,
+        resizable: false,
         transparent: true,
         alwaysOnTop: true,
         icon: path.join(__dirname, "res/drawable/icons/steiner.ico"),
