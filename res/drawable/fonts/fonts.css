@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Bellota Text";
+    font-style: normal;
+    font-weight: 400;
+    src: url("Bellota Text/Bellota Text.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("Poppins/Poppins.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    src: url("Poppins/Poppins Light.woff2") format("woff2");
+}
+
+
+@font-face {
+    font-family: "Visuelt Pro";
+    font-style: normal;
+    font-weight: 400;
+    src: url("Visuelt Pro/VisueltPro-Light.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: 'Road Rage';
+    font-style: normal;
+    font-weight: 400;
+    src : url("Road Rage/Road_Rage.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(MaterialIcons-Regular.eot);
+    src: local('Material Icons'),
+         local('Material Icons/MaterialIcons-Regular'),
+         url("Material Icons/MaterialIcons-Regular.woff2") format('woff2'),
+         url("Material Icons/MaterialIcons-Regular.woff") format('woff'),
+         url("Material Icons/MaterialIcons-Regular.ttf") format('truetype');
+
+    font-size: 1.5em;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'liga';
+}

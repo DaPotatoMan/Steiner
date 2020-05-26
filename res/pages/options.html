@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'; object-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="script-src 'self' 'unsafe-eval'; object-src 'self'">
+    <link rel="stylesheet" href="../layout/options-ui.css">
+</head>
+<body>
+
+    <form class="root" id="compress_options">
+        <div class="option">
+            <label for="option-compress-html">Compress HTML</label>
+            <input id="option-compress-html" name="compress_html" type="checkbox" checked>
+            <input class="dropdown" type="checkbox">
+
+            <div class="dropdown-list">
+                <label>Minify inline CSS                <input name="html_minifyCSS" type="checkbox" checked></label>
+                <label>Minify inline Javascript         <input name="html_minifyJS" type="checkbox" checked></label>
+                <label>Minify URL's                     <input name="html_minifyURLs" type="checkbox" checked></label>
+                <label>Use short DOCTYPE                <input name="html_useShortDoctype" type="checkbox" checked></label>
+                <label>Collapse white spaces            <input name="html_collapseWhitespace" type="checkbox" checked></label>
+                <br/>
+                <label>Remove comments                  <input name="html_removeComments" type="checkbox" checked></label>
+                <label>Remove empty elements            <input name="html_removeEmptyElements" type="checkbox"></label>
+                <label>Remove empty attributes          <input name="html_removeEmptyAttributes" type="checkbox" checked></label>
+                <label>Remove attribute quotes          <input name="html_removeAttributeQuotes" type="checkbox" checked></label>
+                <label>Remove redundant attributes      <input name="html_removeRedundantAttributes" type="checkbox" checked></label>
+                <label>Remove script type attribute     <input name="html_removeScriptTypeAttributes" type="checkbox"></label>
+                <label>Remove style link type attribute <input name="html_removeStyleLinkTypeAttributes" type="checkbox" checked></label>
+            </div>
+        </div>
+
+        <div class="option">
+            <label for="option-compress-css">Compress CSS</label>
+            <input id="option-compress-css" name="compress_css" type="checkbox" checked>
+            <input class="dropdown" type="checkbox">
+
+            <div class="dropdown-list">
+                <label>Keep comments<input name="css_keepComments" type="checkbox"></label>
+            </div>
+        </div>
+        
+        <div class="option">
+            <label for="option-compress-js">Compress Javascript</label>
+            <input id="option-compress-js" name="compress_js" type="checkbox" checked>
+            <input class="dropdown" type="checkbox">
+
+            <div class="dropdown-list">
+                <label>Drop console logs                                <input name="js_dropConsole" type="checkbox" checked></label>
+                <label>Convert booleans to integers                     <input name="js_booleansAsIntegers" type="checkbox" checked></label>
+                <br/>
+                <label>Mangle properties (Unsafe)                       <input name="js_mangleProperties" type="checkbox"></label>
+                <label>Mangle toplevel variables                        <input name="js_mangleTopLevel" type="checkbox" checked></label>
+            </div>
+        </div>
+
+        <br/>
+        <div class="option">
+            <label for="option-overwrite-project">Overwrite Project</label>
+            <input id="option-overwrite-project" name="overwrite_project" type="checkbox" checked>
+        </div>
+    </form>
+    <script src="../../lib/options.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,223 @@
+@import "./common.css";
+
+/* BASIC PAGE */
+.root {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    font-size: 0px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.root .page {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    vertical-align: top;
+    position: relative;
+}
+
+.root .page a.button {
+    width: 200px;
+    padding: 12px 10px;
+
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+
+    color: #000;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 3px;
+
+    cursor: pointer;
+    transition: all 0.2s linear;
+    transition-property: box-shadow, background-color, color;
+}
+
+.root .page a.button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.root .page a.button.bottom-left,
+.root .page a.button.bottom-right {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.root .page a.button.bottom-right {
+    left: auto;
+    right: 30px;
+}
+
+.root .page input:focus {
+    outline: none;
+}
+
+/* FIRST PAGE | STARTER */
+
+#project-starter img {
+    width: 50%;
+    min-width: 100px;
+    max-width: 250px;
+}
+
+#project-starter p {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+#project-starter #about-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 35px;
+    height: 35px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #000;
+    border: 2px solid rgb(228, 228, 228);
+    border-radius: 50%;
+    outline: none;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#project-starter #about-icon:hover {
+    background-color: rgb(247, 247, 247);
+    border-color: rgb(228, 228, 228);
+}
+
+/* SECOND PAGE | INFO */
+
+#project-info {
+    color: black;
+}
+
+#project-info h1 {
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#project-info input {
+    width: 60%;
+    min-width: 100px;
+    max-width: 350px;
+    padding: 15px 20px;
+
+    cursor: pointer;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+
+    transition: border-color 0.2s linear;
+}
+
+#project-info input:hover {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+#project-info input::placeholder { opacity: 0.7; }
+#project-info input:invalid ~ a.button.next {
+    opacity: 0;
+    visibility: hidden;
+}
+#project-info a.button {
+    width: 100px;
+    transition: opacity 0.2s linear;
+}
+
+
+/* THIRD PAGE | CONFIRM */
+
+#project-confirm h2 {
+    width: 330px;
+    text-align: left;
+}
+
+#project-confirm iframe {
+    height: 100%;
+    width: 350px;
+    border: none;
+}
+
+#project-confirm a.button {
+    width: 100px;
+}
+
+
+/* LAST PAGE | PROGRESS */
+#project-progress p {
+    position: relative;
+    width: 300px;
+
+    opacity: 1;
+    max-height: 100px;
+    animation: progress-fade 0.5s linear;
+}
+
+#project-progress p:not(.running):not(.done):not(.error) {
+    display: none;
+}
+
+#project-progress p::after {
+    content: "";
+
+    position: absolute;
+    right: 0px;
+
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+#project-progress p.running::after {
+    content: "refresh";
+    animation: progress-spin 0.5s ease-in-out infinite;
+}
+
+#project-progress p.done::after {
+    content: "done";
+}
+
+#project-progress p.error::after {
+    content: "error";
+    color: #e53935;
+}
+
+#project-progress p:last-of-type:not(.done):not(.error) ~ a.button {
+    visibility: hidden;
+}
+
+@keyframes progress-fade {
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes progress-spin {
+    0% {
+        transform: rotate(-360deg);
+    }
+}

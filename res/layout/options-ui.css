@@ -1,0 +1,170 @@
+@import "./common.css";
+
+/*
+#project-confirm label {
+    display: block;
+    position: relative;
+    width: 300px;
+    padding: 10px 0;
+    margin: 10px 0;
+    overflow: hidden;
+
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+#project-confirm label input {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    margin: 0;
+
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#project-confirm label input.dropdown {
+    right: 5px;
+}
+
+#project-confirm label input::after {
+    float: left;
+    content: "check_box_outline_blank";
+    visibility: visible;
+
+    font-family: "Material Icons";
+    font-size: 18px;
+
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+#project-confirm label input:checked::after {
+    content: "check_box";
+}
+
+
+#project-confirm input.dropdown::after {
+    content: "keyboard_arrow_down";
+    font-size: 24px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#project-confirm input.dropdown:checked::after {
+    content: "keyboard_arrow_down";
+    transform: rotate(-180deg);
+}
+
+#project-confirm input.dropdown ~ .dropdown {
+    max-height: 0px;
+
+    transition: all 0.1s linear;
+}
+
+
+#project-confirm input.dropdown ~ .dropdown label {
+    padding: 5px 0;
+    margin: 10px 0;
+    border: none;
+}
+
+#project-confirm input.dropdown:checked ~ .dropdown {
+    max-height: 1000px;
+}
+
+*/
+
+body {
+    overflow-y: auto;
+}
+
+.root {
+    padding-bottom: 30px;
+}
+
+.option {
+    position: relative;
+    width: 260px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.option label {
+    cursor: pointer;
+}
+
+.option input {
+    float: right;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.option input.dropdown {
+    position: absolute;
+    right: -20px;
+}
+
+.option input::after {
+    content: "check_box_outline_blank";
+    visibility: visible;
+
+    font-family: "Material Icons";
+    font-size: 18px;
+
+    font-feature-settings: 'liga';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.option input:checked::after {
+    content: "check_box";
+}
+
+.option input.dropdown::after {
+    float: left;
+    content: "keyboard_arrow_down";
+    font-size: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.option input.dropdown:checked::after {
+    content: "keyboard_arrow_down";
+    transform: rotate(-180deg);
+}
+
+/* DISABLE DROP DOWN LIST ITEMS */
+.option > input:not(.dropdown):not(:checked) ~ .dropdown-list * {
+    color: grey;
+}
+
+.option > input:not(.dropdown):not(:checked) ~ .dropdown-list input::after {
+    content: "check_box_outline_blank";
+}
+
+/* DROP DOWN LIST */
+.option .dropdown-list {
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+
+    border-top: 1px solid rgb(220, 220, 220);
+
+    font-size: 90%;
+    transition: max-height 0.5s ease-in-out,
+                padding 0.5s ease-in-out,
+                margin 0.5s ease-in-out,
+                opacity 0.2s linear;
+}
+
+.option .dropdown-list label {
+    display: block;
+    padding: 2px 0;
+}
+
+.option input.dropdown:checked + .dropdown-list {
+    max-height: 400px;
+    padding-top: 10px;
+    margin-top: 10px;
+    opacity: 1;
+}

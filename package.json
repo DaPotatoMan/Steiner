@@ -1,0 +1,30 @@
+{
+  "name": "steiner",
+  "version": "1.0.0",
+  "description": "A project minifier application",
+  "author": "Fahadul Islam",
+  "license": "CC BY-NC-ND 3.0",
+  "main": "init.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "org.iamfahad.steiner",
+    "win": {
+      "target": "NSIS",
+      "icon": "res/drawable/icons/steiner.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "dependencies": {
+    "csso": "^4.0.3",
+    "fs-extra": "^9.0.0",
+    "html-minifier-terser": "^5.1.1",
+    "terser": "^4.7.0"
+  }
+}

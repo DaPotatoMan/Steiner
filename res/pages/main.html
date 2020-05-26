@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval'; object-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="script-src 'self' 'unsafe-eval'; object-src 'self'">
+    <link rel="stylesheet" href="../layout/main-ui.css">
+    <title>Steiner</title>
+</head>
+<body>
+
+    <div class="root">
+        <div id="project-starter" class="page">
+            <img src="../drawable/icons/coding.png">
+
+            <h2>Welcome To Steiner</h2>
+            <p>Start compressing your projects the way you want to.</p>
+            <a class="button" href="#project-info">Start</a>
+            <a id="about-icon" href="about.html">i</a>
+        </div>
+
+        <div id="project-info" class="page">
+            <h1>Select Project Path</h1>
+            <input id="project-path" placeholder="/Users/Documents/Fancy A** Project" autocomplete="off" required>
+
+            <a class="button bottom-left" href="#project-starter">Go Back</a>
+            <a class="button bottom-right next" href="#project-confirm">Continue</a>
+        </div>
+
+        <div id="project-confirm" class="page">
+            <h2>Options</h2>
+            <iframe src="options.html"></iframe>
+            
+            <a class="button bottom-left" href="#project-info">Go Back</a>
+            <a class="button bottom-right" id="submit-button">Compress</a>
+        </div>
+
+        <div id="project-progress" class="page">
+            <p id="PROCESS_COPYING_DIR">Copying Project Workspace</p>
+            <p id="PROCESS_SCANNING_FILES">Scanning Files</p>
+            <p id="PROCESS_COMPRESSING_HTML">Compressing HTML</p>
+            <p id="PROCESS_COMPRESSING_CSS">Compressing CSS</p>
+            <p id="PROCESS_COMPRESSING_JS">Compressing Javascript</p>
+            <p id="PROCESS_FINISHED">Compressing Finished</p>
+
+            <br/>
+            <a class="button" href="main.html">Finish</a>
+        </div>
+    </div>
+    
+    <script src="../../lib/minifier.js" type="module"></script>
+</body>
+</html>
